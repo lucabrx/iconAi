@@ -12,8 +12,8 @@ const Header = () => {
 
  
   return (
-    <header className="dark:bg-gray-900">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4">
+    <header className="flex flex-col justify-center items-center w-full">
+      <div className="max-w-[1200px] w-full mx-auto flex h-16 items-center justify-between px-4 ">
         <Link href="/" className="font-bold text-2xl">Icon <span className="text-blue-600">AI</span></Link>
         <ul className="flex gap-4">
           <li>
