@@ -29,7 +29,8 @@ export const env = createEnv({
     ACCESS_KEY: z.string(),
     STRIPE_SECRET_KEY: z.string(),
     HOST_NAME: z.string(),
-    PRODUCT_ID: z.string()
+    PRODUCT_ID: z.string(),
+    STRIPE_WEBHOOK_SECRET: z.string()
   },
 
   /**
@@ -60,6 +61,7 @@ export const env = createEnv({
     STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY,
     NEXT_PUBLIC_STRIPE_KEY: process.env.NEXT_PUBLIC_STRIPE_KEY,
     HOST_NAME: process.env.HOST_NAME,
-    PRODUCT_ID: process.env.PRODUCT_ID
+    PRODUCT_ID: process.env.PRODUCT_ID,
+    STRIPE_WEBHOOK_SECRET: process.env.STRIPE_WEBHOOK_SECRET,
   },
 });
