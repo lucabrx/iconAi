@@ -10,6 +10,8 @@ import { env } from "~/env.mjs";
 import { b64Image } from "~/data/image";
 import AWS from "aws-sdk"
 
+const BUCKET_NAME = "icon-ai-ev"
+const BUCKET_REGION= "eu-central-1"
 const s3 = new AWS.S3({
   credentials: {
     accessKeyId: env.ACCESS_KEY,
@@ -87,7 +89,7 @@ export const generateRouter = createTRPCRouter({
       ContentType: "image/png"
     }).promise()
     return {
-      imageUrl: base64EncodedImage
+      imageUrl: `https://${BUCKET_NAME}.s3.${BUCKET_REGION}.amazonaws.com/${icon.id}`
     }
   })
 });

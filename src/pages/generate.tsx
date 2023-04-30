@@ -74,7 +74,7 @@ className='flex flex-col space-y-4'>
 </form>
 
 <Image 
-src={`data:image/png;base64,${imageUrl}`} 
+src={imageUrl} 
 alt="image from prompt"
 width={100}
 height={100}
