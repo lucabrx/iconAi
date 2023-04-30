@@ -1,6 +1,8 @@
 import { type NextPage } from 'next';
+import { signIn, signOut, useSession } from 'next-auth/react';
 import Head from 'next/head';
 import { ChangeEvent, FormEvent, useState } from 'react';
+import Button from '~/components/Button';
 import Field from '~/components/Field';
 import Input from '~/components/Input';
 import { api } from '~/utils/api';
@@ -8,6 +10,7 @@ import { api } from '~/utils/api';
 
 
 const Generate: NextPage = ({}) => {
+    const session = useSession()
     const [form,setForm] = useState({
     prompt: ""
 })
@@ -17,6 +20,8 @@ const generateIcon =  api.generate.generateIcon.useMutation({
             console.log("successfully mutated")
         }
 })
+
+const isLoggedIn = !!session.data
 
 function updateForm(key: string) {
     return function(e:ChangeEvent<HTMLInputElement> ) {
@@ -40,6 +45,15 @@ function handleSubmit(e: FormEvent) {
 <title>Generate Icon</title>    
 </Head> 
 <main className='flex min-h-screen flex-col items-center justify-center'>
+{
+    !isLoggedIn &&
+    <Button onClick={() => signIn("google").catch(console.error)}>Login</Button>
+}
+{
+    isLoggedIn &&
+    <Button onClick={() => signOut().catch(console.error)}>Logout</Button>
+}
+<p>{session.data?.user.name}</p>
 <form 
 onSubmit={handleSubmit}
 className='flex flex-col space-y-4'>
@@ -50,7 +64,7 @@ className='flex flex-col space-y-4'>
     onChange={updateForm("prompt")}
     />
 </Field>
-    <button className='bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded'>Submit</button>
+    <Button >Submit</Button>
 </form>
 </main>
 </>
