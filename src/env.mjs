@@ -26,7 +26,10 @@ export const env = createEnv({
     DALLE_API_KEY: z.string(),
     MOCK_DALLE: z.string(),
     SECRET_ACCESS_KEY: z.string(),
-    ACCESS_KEY: z.string()
+    ACCESS_KEY: z.string(),
+    STRIPE_SECRET_KEY: z.string(),
+    HOST_NAME: z.string(),
+    PRODUCT_ID: z.string()
   },
 
   /**
@@ -36,6 +39,7 @@ export const env = createEnv({
    */
   client: {
     // NEXT_PUBLIC_CLIENTVAR: z.string().min(1),
+    NEXT_PUBLIC_STRIPE_KEY: z.string(),
   },
 
   /**
@@ -52,6 +56,10 @@ export const env = createEnv({
     DALLE_API_KEY: process.env.DALLE_API_KEY,
     MOCK_DALLE: process.env.MOCK_DALLE,
     SECRET_ACCESS_KEY: process.env.SECRET_ACCESS_KEY,
-    ACCESS_KEY: process.env.ACCESS_KEY
+    ACCESS_KEY: process.env.ACCESS_KEY,
+    STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY,
+    NEXT_PUBLIC_STRIPE_KEY: process.env.NEXT_PUBLIC_STRIPE_KEY,
+    HOST_NAME: process.env.HOST_NAME,
+    PRODUCT_ID: process.env.PRODUCT_ID
   },
 });
