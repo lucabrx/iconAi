@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { ComponentPropsWithoutRef, type FC } from 'react';
+import { type ComponentPropsWithoutRef, type FC } from 'react';
 
 type FieldProps =  ComponentPropsWithoutRef<"div">
 

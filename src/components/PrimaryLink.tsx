@@ -1,6 +1,6 @@
 
-import Link, { type LinkProps } from "next/link";
-import { FC, type ReactNode } from "react";
+import Link from "next/link";
+import { type FC, type ReactNode } from "react";
 interface PrimaryLinkProps {
     children: ReactNode
     href: string;
