@@ -17,7 +17,7 @@ const CollectionPage: NextPage = () => {
         <meta name="description" content="Your Icons" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="container mx-auto mt-24 flex min-h-screen flex-col gap-4 px-8">
+      <main className="max-w-[1200px] mx-auto mt-24 flex w-full flex-col gap-4 px-8">
         <h1 className="text-4xl">Your Icons</h1>
 
         <ul className="grid grid-cols-2 gap-4 sm:grid-cols-4 md:grid-cols-6">

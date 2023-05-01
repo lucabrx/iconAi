@@ -3,6 +3,7 @@ import { useBuyCredits } from "~/hooks/useBuyCredits";
 import  Button  from "./Button";
 import  PrimaryLink  from "./PrimaryLink";
 import Link from "next/link";
+import { api } from "~/utils/api";
 
 const Header = () => {
   const session = useSession();
@@ -10,6 +11,9 @@ const Header = () => {
 
   const isLoggedIn = !!session.data;
 
+  const credits = api.users.getCredits.useQuery(undefined, {
+    enabled: isLoggedIn,
+  });
  
   return (
     <header className="flex flex-col justify-center items-center w-full">
@@ -32,7 +36,7 @@ const Header = () => {
           {isLoggedIn && (
             <>
               <div className="flex items-center">
-                Credits remaining 100
+              Credits remaining {credits.data}
               </div>
               <li>
                 <Button
