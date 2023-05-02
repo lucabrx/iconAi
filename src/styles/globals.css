@@ -1,7 +1,10 @@
+@import url("https://use.typekit.net/pep8ewj.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
- @apply bg-slate-900 text-slate-100 
+font-family: "poppins", sans-serif;
+
 }
