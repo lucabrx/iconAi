@@ -16,8 +16,6 @@ export default {
         "text-sec-dark" : "#BEBEBE",
         "text-sec-light" : "#394456",
         "bg-dark" : "#101318",
-        "bg-light" : "#F9FAFB"
-
       }
     },
   },
