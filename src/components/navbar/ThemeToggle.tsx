@@ -1,12 +1,18 @@
 import {Sun, Moon} from 'lucide-react'
 import { useTheme } from 'next-themes'
+import {type FC, useEffect, useState } from 'react'
 
-import { type NextPage } from 'next'
 
-
-const ThemeToggle: NextPage = () => {
+const ThemeToggle: FC = () => {
     const { setTheme, resolvedTheme} = useTheme()
-   
+    const [mounted, setMounted] = useState(false)
+
+    useEffect(() => {
+        setMounted(true)
+    }, [])
+    if (!mounted) {
+        return null
+      }
       
   return (
     <button>
