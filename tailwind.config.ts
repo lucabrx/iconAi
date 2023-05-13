@@ -1,6 +1,7 @@
 import { type Config } from "tailwindcss";
 
 export default {
+  darkMode: ['class'],
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
@@ -16,6 +17,7 @@ export default {
         "text-sec-dark" : "#BEBEBE",
         "text-sec-light" : "#394456",
         "bg-dark" : "#101318",
+        "bg-light" : "#F9FAFB"
       }
     },
   },
