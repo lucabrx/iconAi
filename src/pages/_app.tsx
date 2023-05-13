@@ -6,7 +6,7 @@ import { ThemeProvider } from 'next-themes'
 import { api } from "~/utils/api";
 
 import "~/styles/globals.css";
-import Header from "~/components/Header";
+import Navbar from "~/components/Navbar";
 
 const MyApp: AppType<{ session: Session | null }> = ({
   Component,
@@ -15,7 +15,7 @@ const MyApp: AppType<{ session: Session | null }> = ({
   return (
     <ThemeProvider attribute="class">
     <SessionProvider session={session}>
-      <Header />
+      <Navbar />
       <Component {...pageProps} />
     </SessionProvider>
     </ThemeProvider>
