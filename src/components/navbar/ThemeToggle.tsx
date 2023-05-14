@@ -1,6 +1,7 @@
 import {Sun, Moon} from 'lucide-react'
 import { useTheme } from 'next-themes'
 import {type FC, useEffect, useState } from 'react'
+import ItemContainer from '../ItemContainer'
 
 
 const ThemeToggle: FC = () => {
@@ -15,11 +16,22 @@ const ThemeToggle: FC = () => {
       }
       
   return (
-    <button>
+    <ItemContainer>
     {
-        resolvedTheme === 'light' ? <Sun onClick={() => setTheme('dark')} /> : <Moon onClick={() => setTheme('light')} />
+        resolvedTheme === 'light' ? 
+        <Sun 
+        className="dark:text-bg-light text-bg-dark"
+        size={28} 
+        onClick={() => setTheme('dark')} 
+        /> 
+        :
+         <Moon 
+         className="dark:text-bg-light text-bg-dark"
+         size={28} 
+         onClick={() => setTheme('light')} 
+         />
     }
-    </button>
+    </ItemContainer>
   )
 }
 
