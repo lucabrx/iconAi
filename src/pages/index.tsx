@@ -34,6 +34,9 @@ const HomePage: NextPage = () => {
         </Button>
       </div>
     </div>
+    <div className="absolute bottom-0 right-0 h-full w-full -z-10 ">
+    <Image src="/meshh.png" alt="Hero Image" fill/>
+    </div>
     </section>
     </>
   );
