@@ -7,7 +7,8 @@ const Input: FC<InputProps> = (props) => {
 <input
 {...props}
 type="text" 
-className='rounded p-1 border border-gray-200 focus:ring-2 focus:ring-blue-500 text-slate-900'
+
+className='rounded  border  focus:ring-2 focus:ring-cta-light focus:dark:ring-cta-dark dark:border-my-gray-200 border-my-gray-500 text-bg-dark dark:text-bg-light p-2 outline-none'
 />
 )
 }
