@@ -29,7 +29,7 @@ const Navbar = () => {
 
         <div className="flex justify-center items-centar gap-2">
         <ThemeToggle  />
-        <ItemContainer onClick={() => setOpenBurger(true)}>
+        <ItemContainer variant="ghost" onClick={() => setOpenBurger(true)}>
           <Menu className="dark:text-bg-light text-bg-dark" size={32} />
         </ItemContainer>
         </div>
@@ -37,7 +37,11 @@ const Navbar = () => {
       </div>
       {
         openBurger && (
-          <Sidebar onClick={() => setOpenBurger(false)} />
+          <Sidebar 
+          state={openBurger} 
+          closeEvent={() => setOpenBurger(false)}
+          onClick={() => setOpenBurger(false)} 
+          />
         )
       }
     </header>

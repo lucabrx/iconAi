@@ -16,7 +16,8 @@ const ThemeToggle: FC = () => {
       }
       
   return (
-    <ItemContainer>
+    
+     <ItemContainer variant="ghost">
     {
         resolvedTheme === 'light' ? 
         <Sun 
@@ -32,6 +33,8 @@ const ThemeToggle: FC = () => {
          />
     }
     </ItemContainer>
+
+   
   )
 }
 
