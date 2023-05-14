@@ -49,9 +49,9 @@ const Navbar = () => {
           </ItemContainer>
         </div>
 
-        <div className="flex justify-center items-centar gap-2">
+        <div className=" flex justify-center items-centar gap-2">
         {session.data && 
-        <div className='flex w-full items-center justify-center gap-4'>
+        <div className='hidden md:flex w-full items-center justify-center gap-4'>
         <p className=' font-medium text-center pt-1'>{credits.data?.credits} Credits</p>
         <Button onClick={buyCredits} variant="cta">Buy Credits</Button>
         </div>
