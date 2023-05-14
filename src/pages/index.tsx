@@ -1,7 +1,9 @@
+import { Heart } from "lucide-react";
 import { type NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Button from "~/components/Button";
+import HomeCard from "~/components/HomeCard";
 
 
 const HomePage: NextPage = () => {
@@ -13,7 +15,8 @@ const HomePage: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section className="w-full flex justify-center items-center md:h-[calc(100vh-100px)] ">
-    <div className="max-w-[950px] flex flex-col md:flex-row-reverse  justify-center items-center w-full px-[16px] gap-4 md:justify-between">
+        <div>
+    <div className="max-w-[1000px] flex flex-col md:flex-row-reverse  justify-center items-center w-full px-[16px] gap-4 md:justify-between pb-8">
       <div className="relative h-[313px] w-[300px]">
       <Image 
       alt="Home Hero Image"
@@ -34,10 +37,36 @@ const HomePage: NextPage = () => {
         </Button>
       </div>
     </div>
+    <div className="hidden lg:flex w-full gap-5 items-center justify-center pt-8">
+      <HomeCard
+      title="5 free credits"
+      description="For the community"
+      icon = {Heart}
+      />
+       <HomeCard
+      title="5 free credits"
+      description="For the community"
+      icon = {Heart}
+      />
+       <HomeCard
+      title="5 free credits"
+      description="For the community"
+      icon = {Heart}
+      />
+       <HomeCard
+      title="5 free credits"
+      description="For the community"
+      icon = {Heart}
+      />
+    </div>
+    </div>
+    </section>
+    
+    
+
     <div className="absolute bottom-0 right-0 h-full w-full -z-10 ">
     <Image src="/meshh.png" alt="Hero Image" fill/>
     </div>
-    </section>
     </>
   );
 };
