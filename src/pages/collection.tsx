@@ -38,8 +38,8 @@ const CollectionPage: NextPage = () => {
         <meta name="description" content="Profile" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <section className="w-full flex justify-center items-center ">
-    <div className="max-w-[1200px] flex flex-col  justify-center items-center w-full">
+    <section className="w-full flex justify-center items-center">
+    <div className="max-w-[1200px] flex flex-col  justify-center items-center w-full px-[16px]">
     <UserProfile 
     email={session?.user?.email}
     name={session?.user?.name}
@@ -51,7 +51,7 @@ const CollectionPage: NextPage = () => {
     <div className="mt-6 w-full flex gap-4 md:gap-6 items-start flex-row md:justify-start justify-center ">
     {
       icons.data?.map((icon: Icon) => (
-        <div className="relative w-48 h-48">
+        <div className="relative w-40 h-40 md:w-48 md:h-48">
         <Image
         className="w-full rounded-lg"
         fill
