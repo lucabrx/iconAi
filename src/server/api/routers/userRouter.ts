@@ -7,6 +7,6 @@ export const userRouter = createTRPCRouter({
         id: ctx.session.user.id,
       },
     });
-    return user?.credits;
+    return user
   }),
 });

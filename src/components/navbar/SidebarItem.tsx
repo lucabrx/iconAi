@@ -19,7 +19,7 @@ const SidebarItem: FC<SidebarItemProps> = ({
   return (
   <div 
   onClick={onClick}
-  className='flex justify-between items-center w-full p-2 rounded-md hover:bg-my-gray-500/30 dark:hover:bg-my-gray-200/20 px-4'> 
+  className='flex justify-between items-center w-full p-2 rounded-md hover:bg-my-gray-500/30 dark:hover:bg-my-gray-200/20 px-4 select-none cursor-pointer'> 
   <ItemContainer variant="solid">
   <Icon size={24} className='text-bg-light dark:text-bg-light'/>
   </ItemContainer>
