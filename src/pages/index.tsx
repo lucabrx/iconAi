@@ -1,12 +1,27 @@
 import { type NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import Button from "~/components/Button";
+import GenerateModal from "~/components/GenerateModal";
 import  PrimaryLinkButton  from "~/components/PrimaryLinkButton";
+import useGenerateModal from "~/hooks/useGenerateModal";
 
 const HeroBanner = () => {
+  const generateModal = useGenerateModal();
   return (
+    <>
+    {
+      generateModal.isOpen && (
+        <GenerateModal />
+      )
+    }
     <section className="w-full flex justify-center items-center ">
     <div className="grid grid-cols-12 w-full max-w-[1200px] justify-items-center justify-center items-center pt-20">
+      <Button
+      onClick={generateModal.onOpen}
+      variant="cta">
+        open 
+      </Button>
       <div className="flex flex-col gap-4 col-start-2 col-end-8">
         <h1 className="text-6xl">Generate icons with a click of a button</h1>
         <p className="text-2xl">
@@ -26,6 +41,7 @@ const HeroBanner = () => {
       />
       </div>
     </section>
+    </>
   );
 }
 

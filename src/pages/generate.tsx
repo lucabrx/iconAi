@@ -159,7 +159,7 @@ const GeneratePage: NextPage = () => {
           )}
 
           <Button
-            isLoading={generateIcon.isLoading}
+            // isLoading={generateIcon.isLoading}
             disabled={generateIcon.isLoading}
           >
             Submit

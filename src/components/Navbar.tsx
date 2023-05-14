@@ -9,6 +9,8 @@ import { useState } from "react";
 import Sidebar from "./navbar/Sidebar";
 import Button from "./Button";
 
+//TODO improve ui of navbar
+
 const Navbar = () => {
   const session = useSession();
   const { buyCredits } = useBuyCredits();
