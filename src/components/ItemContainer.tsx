@@ -1,12 +1,28 @@
-import { type ComponentPropsWithoutRef, type FC } from 'react';
+import { type VariantProps, cva } from 'class-variance-authority';
+import { type ButtonHTMLAttributes, type FC } from 'react';
+import cn from '~/utils/cn';
 
-type ItemContainerProps = ComponentPropsWithoutRef<"button"> 
+const containerVariants = cva("rounded-md", {
+  variants: {
+     variant: {
+        solid: "bg-cta-light dark:bg-cta-dark p-1 rounded-md text-bg-light",
+        ghost: "p-1 rounded-md hover:bg-my-gray-500/30 dark:hover:bg-my-gray-200/20"
+     },
+  },
+  defaultVariants: {
+      variant: "ghost"
+  }
+})
 
 
-const ItemContainer: FC<ItemContainerProps> = (props) => {
+interface ItemContainerProps extends ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof containerVariants> {
+
+}
+
+
+const ItemContainer: FC<ItemContainerProps> = ({className, variant, ...props}) => {
   return (
-<button {...props} className='p-1 rounded-md hover:bg-my-gray-500/30 dark:hover:bg-my-gray-200/20'> 
-
+<button  className={cn(containerVariants({variant,className}))}> 
 {props.children}
 </button>
 )
