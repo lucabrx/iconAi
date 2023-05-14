@@ -29,7 +29,7 @@ const Sidebar: FC<SidebarProps> = ({onClick,state,closeEvent}) => {
     useClickOutside(sidebarRef,onClick)
   return (
 <div ref={sidebarRef} className='absolute right-0 top-0 h-screen w-[300px] px-4
-bg-neutral-50 dark:bg-neutral-900
+bg-neutral-50 dark:bg-neutral-900 z-50
 '> 
 <X onClick={onClick} size={36} className='cursor-pointer absolute top-4 right-4 rounded-md hover:bg-my-gray-500/30 dark:hover:bg-my-gray-200/20 dark:text-bg-light text-bg-dark'/>
 <div className='pt-[72px] flex flex-col items-center justify-center w-full space-y-4'>

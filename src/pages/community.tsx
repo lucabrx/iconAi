@@ -18,7 +18,7 @@ const CollectionPage: NextPage = () => {
         <meta name="description" content="Community Icons" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <section className="w-full flex justify-center items-center">
+      <section className="w-full flex justify-center items-center pb-4">
     <div className="max-w-[1200px] flex flex-col  justify-center items-center w-full px-[16px]">
     <h2 className="font-medium w-full text-center md:text-left text-4xl text-bg-dark dark:text-bg-light pt-6">
     Our Community Icons
