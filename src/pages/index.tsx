@@ -1,4 +1,4 @@
-import { Heart } from "lucide-react";
+import { AlertCircle, DollarSign, Heart, Laugh } from "lucide-react";
 import { type NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
@@ -44,19 +44,19 @@ const HomePage: NextPage = () => {
       icon = {Heart}
       />
        <HomeCard
-      title="5 free credits"
-      description="For the community"
-      icon = {Heart}
+      title="5 dollar 100credits"
+      description="Pricing"
+      icon = {DollarSign}
       />
        <HomeCard
-      title="5 free credits"
-      description="For the community"
-      icon = {Heart}
+      title="1 credit 1 icon"
+      description="Pricing"
+      icon = {AlertCircle}
       />
        <HomeCard
-      title="5 free credits"
-      description="For the community"
-      icon = {Heart}
+      title="Refund policy"
+      description="Check community"
+      icon = {Laugh}
       />
     </div>
     </div>

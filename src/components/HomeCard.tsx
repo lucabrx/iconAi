@@ -14,8 +14,10 @@ const HomeCard: FC<HomeCardProps> = ({
     description,
 }) => {
   return (
-<div className='w-[200px] h-[150px] dark:bg-blue-900/20 bg-blue-300/30 flex justify-center items-center relative rounded-md shadow-sm backdrop-blur-lg'> 
-<ItemContainer className='absolute top-2 left-2 bg-cta-light dark:bg-cta-dark'>
+<div 
+style={{backdropFilter: 'blur(20px)'}}
+className='w-[200px] h-[150px] dark:bg-blue-900/20 bg-blue-300/30 flex justify-center items-center relative rounded-md shadow-sm bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60  '> 
+<ItemContainer className='absolute top-2 left-2 hover:bg-cta-light dark:bg-cta-dark bg-cta-light hover:dark:bg-cta-dark select-none cursor-default'>
 <Icon size={18} className='text-bg-light' />
 </ItemContainer>
 <h2 className='font-[500] text-bg-dark dark:text-bg-light'>{title}</h2>
