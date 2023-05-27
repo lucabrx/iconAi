@@ -4,7 +4,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Button from "~/components/Button";
 import HomeCard from "~/components/HomeCard";
-
+import { motion } from "framer-motion";
 
 const HomePage: NextPage = () => {
   return (
@@ -17,14 +17,23 @@ const HomePage: NextPage = () => {
       <section className="w-full flex justify-center items-center md:h-[calc(100vh-100px)] ">
         <div>
     <div className="max-w-[1000px] flex flex-col md:flex-row-reverse  justify-center items-center w-full px-[16px] gap-4 md:justify-between pb-8">
-      <div className="relative h-[313px] w-[300px]">
+      <motion.div
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5 }}
+
+      className="relative h-[313px] w-[300px]">
       <Image 
       alt="Home Hero Image"
       fill 
       src="/hero.png"
       />
-      </div>
-      <div className="flex justify-start w-full items-start  flex-col space-y-3 lg:max-w-[500px] md:max-w-[300px]">
+      </motion.div>
+      <motion.div
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5 }}
+      className="flex justify-start w-full items-start  flex-col space-y-3 lg:max-w-[500px] md:max-w-[300px]">
         <h2 className="font-bold text-[32px] lg:text-[42px] leading-[36px] md:leading-[50px] text-bg-dark dark:text-bg-light">
         Generate icons with a click of a button
         </h2>
@@ -35,7 +44,7 @@ const HomePage: NextPage = () => {
         <Button>
           Generate Icon
         </Button>
-      </div>
+      </motion.div>
     </div>
     <div className="hidden lg:flex w-full gap-5 items-center justify-center pt-8">
       <HomeCard

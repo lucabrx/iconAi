@@ -9,7 +9,6 @@ import { useState } from "react";
 import Sidebar from "./navbar/Sidebar";
 import Button from "./Button";
 
-//TODO improve ui of navbar
 
 const Navbar = () => {
   const session = useSession();
@@ -23,7 +22,8 @@ const Navbar = () => {
   });
  
   return (
-    <header className="w-full  h-auto flex justify-center relative  border-b dark:border-b-my-gray-200/30 border-b-my-gray-500/30">
+    <header 
+    className="w-full  h-auto flex justify-center relative  border-b dark:border-b-my-gray-200/30 border-b-my-gray-500/30">
       <div className="flex justify-between items-center w-full max-w-[1200px] p-2   px-4">
         <Link href="/" className="text-[28px] mt-1 leading-[0px] font-bold">
         Icon
