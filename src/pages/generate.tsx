@@ -5,9 +5,7 @@ import Field from '~/components/Field';
 import Input from '~/components/Input';
 import { api } from '~/utils/api';
 
-interface GenerateProps {
-  
-}
+
 
 const colors = [
     {
@@ -61,7 +59,7 @@ const colors = [
 ];
 
 
-const Generate: FC<GenerateProps> = ({}) => {
+const Generate: FC = ({}) => {
     const [error, setError] = useState("");
     const [imagesUrl, setImagesUrl] = useState<{ imageUrl: string }[]>([]);
     const [form, setForm] = useState({

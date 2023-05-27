@@ -1,4 +1,4 @@
-import { Icon } from 'lucide-react';
+import { type Icon } from 'lucide-react';
 import { type FC } from 'react';
 import ItemContainer from './ItemContainer';
 import {motion} from "framer-motion"

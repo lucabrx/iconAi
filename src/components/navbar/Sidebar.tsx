@@ -1,3 +1,5 @@
+
+//eslint disable typescript-eslint/no-misused-promises
 import { Brush, Home, User, UserCheck, UserMinus, Users2, X } from 'lucide-react';
 import { useRef, type FC } from 'react';
 import { useClickOutside } from '~/hooks/useClickOutside';
@@ -75,8 +77,7 @@ session ? (
   <SidebarItem
   icon={UserCheck}
   label="Login"
-  onClick={() => {
-    signIn("google")
+  onClick={() => { void signIn("google").catch(console.error);
     closeEvent()
   }} 
   />

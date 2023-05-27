@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/alt-text */
 import { type Icon } from "@prisma/client";
-import { NextPageContext, type NextPage } from "next";
+import { type NextPageContext, type NextPage } from "next";
 import { getSession, useSession } from "next-auth/react";
 import Head from "next/head";
 import Image from "next/image";
@@ -50,8 +50,10 @@ const CollectionPage: NextPage = () => {
     </h2>
     <div className="mt-6 w-full flex gap-4 md:gap-6 items-start flex-row md:justify-start justify-center ">
     {
-      icons.data?.map((icon: Icon) => (
-        <div className="relative w-40 h-40 md:w-48 md:h-48">
+      icons.data?.map((icon: Icon, i) => (
+        <div 
+        key={i}
+        className="relative w-40 h-40 md:w-48 md:h-48">
         <Image
         className="w-full rounded-lg"
         fill

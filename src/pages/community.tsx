@@ -25,8 +25,10 @@ const CollectionPage: NextPage = () => {
     </h2>
     <div className="mt-6 w-full flex gap-4 md:gap-6 items-start flex-row md:justify-start justify-center flex-wrap ">
     {
-      icons.data?.map((icon: Icon) => (
-        <div className="relative w-40 h-40 md:w-48 md:h-48">
+      icons.data?.map((icon: Icon, i) => (
+        <div 
+        key={i}
+        className="relative w-40 h-40 md:w-48 md:h-48">
         <Image
         className="w-full rounded-lg"
         fill
