@@ -108,7 +108,7 @@ Fill out the form below to start generating your icons.
 </p>
 
 <form className="flex flex-col gap-4" onSubmit={handleFormSubmit}>
-<h2 className="text-lg text-bg-dark dark:text-bg-light">
+<h2 className="text-xl text-bg-dark dark:text-bg-light">
             1. Describe what your want your icon to look like.
           </h2>
           <Field>
