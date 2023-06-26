@@ -6,41 +6,36 @@ import useLockOverflow from '~/hooks/useLockOverflow';
 import { useClickOutside } from '~/hooks/useClickOutside';
 import Image from 'next/image';
 import { signIn } from 'next-auth/react';
-import { useRouter } from 'next/router';
 
-interface LoginModalProps {
-  
-}
 
-const LoginModal: FC<LoginModalProps> = ({}) => {
+const LoginModal: FC = () => {
     const loginModal = useLoginModal();
     const [isLoadingGoogle, setIsLoadingGoogle] = useState<boolean>(false)
     const [isLoadingGithub, setIsLoadingGithub] = useState<boolean>(false)
     const modalRef = useRef<HTMLDivElement>(null);
-    const router = useRouter();
 
     useLockOverflow(loginModal.isOpen)
     useClickOutside(modalRef, loginModal.close)
 
-    function loginWithGoogle() {
+  async  function loginWithGoogle() {
       try {
         setIsLoadingGoogle(true)
-        signIn("google")
+      await signIn("google")
       } catch(e) {
         console.log(e)
       } finally {
     setIsLoadingGoogle(false)
   }
     }
-    function loginWithGithub() {
+  async  function loginWithGithub() {
       try {
         setIsLoadingGithub(true)
-        signIn("github")
+      await signIn("github")
         // router.reload()
       } catch(e) {
         console.log(e)
       } finally {
-        setIsLoadingGithub(false)
+       setIsLoadingGithub(false)
   }
     }
 

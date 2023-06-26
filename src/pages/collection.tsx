@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/alt-text */
 import { type Icon } from "@prisma/client";
-import { type NextPageContext, type NextPage } from "next";
-import { getSession, useSession } from "next-auth/react";
+import {  type NextPage } from "next";
+import {  useSession } from "next-auth/react";
 import Head from "next/head";
 import Image from "next/image";
 import EmptyState from "~/components/EmptyState";
