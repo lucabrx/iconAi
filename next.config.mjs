@@ -10,7 +10,8 @@ const config = {
 images: {
   domains: ["oaidalleapiprodscus.blob.core.windows.net",
             "icon-ai-ev.s3.eu-central-1.amazonaws.com",
-            "lh3.googleusercontent.com"
+            "lh3.googleusercontent.com",
+            'avatars.githubusercontent.com',
 ]
            
 },
