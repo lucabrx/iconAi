@@ -30,7 +30,9 @@ export const env = createEnv({
     STRIPE_SECRET_KEY: z.string(),
     HOST_NAME: z.string(),
     PRODUCT_ID: z.string(),
-    STRIPE_WEBHOOK_SECRET: z.string()
+    STRIPE_WEBHOOK_SECRET: z.string(),
+    GITHUB_CLIENT_ID : z.string(),
+    GITHUB_CLIENT_SECRET: z.string(),
   },
 
   /**
@@ -63,5 +65,7 @@ export const env = createEnv({
     HOST_NAME: process.env.HOST_NAME,
     PRODUCT_ID: process.env.PRODUCT_ID,
     STRIPE_WEBHOOK_SECRET: process.env.STRIPE_WEBHOOK_SECRET,
+    GITHUB_CLIENT_ID: process.env.GITHUB_CLIENT_ID,
+    GITHUB_CLIENT_SECRET: process.env.GITHUB_CLIENT_SECRET,
   },
 });

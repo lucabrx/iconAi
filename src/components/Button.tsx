@@ -8,6 +8,8 @@ const buttonVariants = cva("rounded-md flex justify-center items-center gap-4", 
      variant: {
         cta: "bg-cta-light dark:bg-cta-dark p-2 px-4 rounded-md text-bg-light dark:text-bg-light hover:bg-cta-dark dark:hover:bg-cta-hover-dark",
         ghost : "bg-transparent p-2 px-4 rounded-md text-bg-dark dark:text-bg-light hover:bg-my-gray-500/30 dark:hover:bg-my-gray-200/20 font-[500] text-[16px] h-full flex justify-center items-center pt-3",
+        "google" : "shadow-sm bg-[#fefffe] hover:bg-[#fefffe]/70 text-[#111926]",
+        "github" : "shadow-sm bg-[#27272a] hover:bg-[#27272a]/70 text-[#fefffe]",
        
      },
   },

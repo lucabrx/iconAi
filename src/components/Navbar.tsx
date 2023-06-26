@@ -1,4 +1,4 @@
-import {  signIn, signOut, useSession } from "next-auth/react";
+import {  signOut, useSession } from "next-auth/react";
 import { useBuyCredits } from "~/hooks/useBuyCredits";
 import { Menu } from "lucide-react";
 import Link from "next/link";
@@ -8,12 +8,14 @@ import ItemContainer from "./ItemContainer";
 import { useState } from "react";
 import Sidebar from "./navbar/Sidebar";
 import Button from "./Button";
+import useLoginModal from "~/hooks/useLoginModal";
 
 
 const Navbar = () => {
   const session = useSession();
   const { buyCredits } = useBuyCredits();
-  const [openBurger,setOpenBurger] = useState<boolean>(false)
+  const [openBurger,setOpenBurger] = useState<boolean>(false);
+  const loginModal = useLoginModal()
 
   const isLoggedIn = !!session.data;
 
@@ -79,7 +81,7 @@ const Navbar = () => {
           (
             <Button 
             variant="cta" 
-            onClick={() => signIn("google")}>
+            onClick={loginModal.open}>
             Login
             </Button>
           )

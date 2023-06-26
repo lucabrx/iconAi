@@ -5,32 +5,17 @@ import { type NextPageContext, type NextPage } from "next";
 import { getSession, useSession } from "next-auth/react";
 import Head from "next/head";
 import Image from "next/image";
+import EmptyState from "~/components/EmptyState";
 import UserProfile from "~/components/UserProfile";
 import { api } from "~/utils/api";
 const BUCKET_NAME = "icon-ai-ev";
 
-export async function getServerSideProps(context: NextPageContext) {
-  const session = await getSession(context);
 
-  if (!session) {
-    return {
-      redirect: {
-        destination: '/api/auth/callback/google',
-        permanent: false,
-      }
-    }
-  }
-
-  return {
-    props: {
-      session
-    }
-  }
-}
 
 const CollectionPage: NextPage = () => {
   const icons = api.icons.getIcons.useQuery();
   const {data: session} = useSession();
+  if(!session) return <EmptyState />
   return (
     <>
       <Head>

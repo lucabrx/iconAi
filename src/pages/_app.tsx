@@ -8,6 +8,7 @@ import { api } from "~/utils/api";
 import "~/styles/globals.css";
 import Navbar from "~/components/Navbar";
 import Footer from "~/components/Footer";
+import LoginModal from "~/components/LoginModal";
 
 const MyApp: AppType<{ session: Session | null }> = ({
   Component,
@@ -23,6 +24,7 @@ const MyApp: AppType<{ session: Session | null }> = ({
       </div>
       <Footer />
     </div>
+    <LoginModal />
     </SessionProvider>
     </ThemeProvider>
   );
